@@ -1,59 +1,17 @@
 import React, { useEffect } from 'react';
 
-const LOGO_URL =  + LOGO + r;
+const LOGO_URL = 'https://chatjdevibe.innova9.io/vibe/images/Logo_thin.png';
 const FONT = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-const BUILD =  + BUILD + r;
-const BASE =  + BASE + r;
+const BUILD = 'bnj-mike-20260930-1530mt';
+const BASE = 'https://chatjdevibe.innova9.io';
 
 const APPS = [
-  {
-    slug: 'bakenjoy-field',
-    title: 'Field Maintenance',
-    subtitle: 'Start / complete work orders',
-    desc: 'Open equipment WOs, start jobs (MH), report hours, and complete field work.',
-    color: '#2563eb',
-    icon: 'wrench',
-  },
-  {
-    slug: 'bakenjoy-wolist',
-    title: 'My Work Orders',
-    subtitle: 'Assignee-filtered WO list',
-    desc: 'List maintenance WOs assigned to you, open detail, and start work.',
-    color: '#7c3aed',
-    icon: 'list',
-  },
-  {
-    slug: 'bakenjoy-create-wo',
-    title: 'Create Work Order',
-    subtitle: 'Non-PM Add Work Order',
-    desc: 'Create a durable equipment maintenance WO on an asset (P13714 Add).',
-    color: '#059669',
-    icon: 'plus',
-  },
-  {
-    slug: 'bakenjoy-assetbom',
-    title: 'Asset BOM',
-    subtitle: 'Equipment parts list',
-    desc: 'Browse the bill of materials for an asset (F13017).',
-    color: '#d97706',
-    icon: 'layers',
-  },
-  {
-    slug: 'bakenjoy-parts',
-    title: 'Part Lookup',
-    subtitle: 'Search + availability',
-    desc: 'Search items by description and check on-hand / available by branch.',
-    color: '#db2777',
-    icon: 'search',
-  },
-  {
-    slug: 'bakenjoy-pmschedule',
-    title: 'PM Schedule',
-    subtitle: 'Preventive maintenance',
-    desc: 'View PM schedule lines for an asset (F1207).',
-    color: '#0891b2',
-    icon: 'calendar',
-  },
+  { slug: 'bakenjoy-field', title: 'Field Maintenance', subtitle: 'Start / complete work orders', desc: 'Open equipment WOs, start jobs (MH), report hours, and complete field work.', color: '#2563eb', icon: 'wrench' },
+  { slug: 'bakenjoy-wolist', title: 'My Work Orders', subtitle: 'Assignee-filtered WO list', desc: 'List maintenance WOs assigned to you, open detail, and start work.', color: '#7c3aed', icon: 'list' },
+  { slug: 'bakenjoy-create-wo', title: 'Create Work Order', subtitle: 'Non-PM Add Work Order', desc: 'Create a durable equipment maintenance WO on an asset (P13714 Add).', color: '#059669', icon: 'plus' },
+  { slug: 'bakenjoy-assetbom', title: 'Asset BOM', subtitle: 'Equipment parts list', desc: 'Browse the bill of materials for an asset (F13017).', color: '#d97706', icon: 'layers' },
+  { slug: 'bakenjoy-parts', title: 'Part Lookup', subtitle: 'Search + availability', desc: 'Search items by description and check on-hand / available by branch.', color: '#db2777', icon: 'search' },
+  { slug: 'bakenjoy-pmschedule', title: 'PM Schedule', subtitle: 'Preventive maintenance', desc: 'View PM schedule lines for an asset (F1207).', color: '#0891b2', icon: 'calendar' },
 ];
 
 const Icon = ({ name, color }) => {
@@ -91,7 +49,6 @@ export default function BakeNJoyHome() {
                 boxShadow: '0 20px 40px -16px rgba(0,0,0,0.35)',
                 border: '1px solid rgba(255,255,255,0.6)',
                 display: 'flex', flexDirection: 'column', gap: 12,
-                transition: 'transform 0.15s ease, box-shadow 0.15s ease',
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
