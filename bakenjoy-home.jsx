@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 const LOGO_URL = 'https://chatjdevibe.innova9.io/vibe/images/Logo_thin.png';
 const FONT = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-const BUILD = 'bnj-mike-20260930-1530mt';
+const BUILD = 'bnj-mike-20260930-1650mt';
 const BASE = 'https://chatjdevibe.innova9.io';
 
 const APPS = [
