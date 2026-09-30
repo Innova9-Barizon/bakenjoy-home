@@ -2,16 +2,15 @@ import React, { useEffect } from 'react';
 
 const LOGO_URL = 'https://chatjdevibe.innova9.io/vibe/images/Logo_thin.png';
 const FONT = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-const BUILD = 'bnj-mike-20260930-1650mt';
 const BASE = 'https://chatjdevibe.innova9.io';
 
 const APPS = [
-  { slug: 'bakenjoy-field', title: 'Field Maintenance', subtitle: 'Start / complete work orders', desc: 'Open equipment WOs, start jobs (MH), report hours, and complete field work.', color: '#2563eb', icon: 'wrench' },
-  { slug: 'bakenjoy-wolist', title: 'My Work Orders', subtitle: 'Assignee-filtered WO list', desc: 'List maintenance WOs assigned to you, open detail, and start work.', color: '#7c3aed', icon: 'list' },
-  { slug: 'bakenjoy-create-wo', title: 'Create Work Order', subtitle: 'Non-PM Add Work Order', desc: 'Create a durable equipment maintenance WO on an asset (P13714 Add).', color: '#059669', icon: 'plus' },
-  { slug: 'bakenjoy-assetbom', title: 'Asset BOM', subtitle: 'Equipment parts list', desc: 'Browse the bill of materials for an asset (F13017).', color: '#d97706', icon: 'layers' },
+  { slug: 'bakenjoy-field', title: 'Field Maintenance', subtitle: 'Start / complete work orders', desc: 'Open equipment work orders, start jobs, report hours, and complete field work.', color: '#2563eb', icon: 'wrench' },
+  { slug: 'bakenjoy-wolist', title: 'My Work Orders', subtitle: 'My assigned work orders', desc: 'List maintenance work orders assigned to you, open detail, and start work.', color: '#7c3aed', icon: 'list' },
+  { slug: 'bakenjoy-create-wo', title: 'Create Work Order', subtitle: 'New maintenance work order', desc: 'Create a maintenance work order on an equipment asset.', color: '#059669', icon: 'plus' },
+  { slug: 'bakenjoy-assetbom', title: 'Asset BOM', subtitle: 'Equipment parts list', desc: 'Browse the bill of materials for an equipment asset.', color: '#d97706', icon: 'layers' },
   { slug: 'bakenjoy-parts', title: 'Part Lookup', subtitle: 'Search + availability', desc: 'Search items by description and check on-hand / available by branch.', color: '#db2777', icon: 'search' },
-  { slug: 'bakenjoy-pmschedule', title: 'PM Schedule', subtitle: 'Preventive maintenance', desc: 'View PM schedule lines for an asset (F1207).', color: '#0891b2', icon: 'calendar' },
+  { slug: 'bakenjoy-pmschedule', title: 'PM Schedule', subtitle: 'Preventive maintenance', desc: 'View preventive maintenance schedule lines for an equipment asset.', color: '#0891b2', icon: 'calendar' },
 ];
 
 const Icon = ({ name, color }) => {
@@ -32,10 +31,10 @@ export default function BakeNJoyHome() {
     <div style={{ minHeight: '100vh', fontFamily: FONT, background: 'linear-gradient(160deg, #0f172a 0%, #1e3a8a 45%, #3b82f6 100%)' }}>
       <div style={{ maxWidth: 980, margin: '0 auto', padding: '32px 20px 48px' }}>
         <header style={{ textAlign: 'center', marginBottom: 36, color: '#fff' }}>
-          <img src={LOGO_URL} alt="Innova9" style={{ height: 56, objectFit: 'contain', marginBottom: 16 }} />
+          <img src={LOGO_URL} alt="Innova9" style={{ display: 'block', height: 56, margin: '0 auto 16px', objectFit: 'contain' }} />
           <h1 style={{ margin: '0 0 8px', fontSize: 28, fontWeight: 800, letterSpacing: '-0.02em' }}>Bake n Joy</h1>
           <p style={{ margin: 0, fontSize: 16, opacity: 0.9 }}>Equipment Maintenance · Capital Asset Management</p>
-          <p style={{ margin: '8px 0 0', fontSize: 13, opacity: 0.7 }}>Innova9 Flow9 · JD Edwards EnterpriseOne</p>
+          <p style={{ margin: '8px 0 0', fontSize: 13, opacity: 0.7 }}>JD Edwards EnterpriseOne</p>
         </header>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 16 }}>
@@ -61,17 +60,12 @@ export default function BakeNJoyHome() {
                 </div>
               </div>
               <p style={{ margin: 0, fontSize: 13, color: '#4b5563', lineHeight: 1.45, flex: 1 }}>{app.desc}</p>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 4 }}>
-                <span style={{ fontSize: 11, color: '#9ca3af', fontFamily: 'monospace' }}>/{app.slug}</span>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginTop: 4 }}>
                 <span style={{ fontSize: 13, fontWeight: 600, color: app.color }}>Open →</span>
               </div>
             </a>
           ))}
         </div>
-
-        <footer style={{ textAlign: 'center', marginTop: 36, color: 'rgba(255,255,255,0.65)', fontSize: 12 }}>
-          DV smoke · DABBOTT / JDV920 · build {BUILD}
-        </footer>
       </div>
     </div>
   );
