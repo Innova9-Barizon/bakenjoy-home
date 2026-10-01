@@ -67,6 +67,7 @@ const ENV_PREF = 'bakenjoy_env_pref';
 const APPS = [
   { slug: 'bakenjoy-field', title: 'Field Maintenance', subtitle: 'Start / complete work orders', desc: 'Open equipment work orders, start jobs, report hours, and complete field work.', color: '#2563eb', icon: 'wrench' },
   { slug: 'bakenjoy-wolist', title: 'My Work Orders', subtitle: 'My assigned work orders', desc: 'List maintenance work orders assigned to you, open detail, and start work.', color: '#7c3aed', icon: 'list' },
+  { slug: 'bakenjoy-dashboard', title: 'Dashboard & Reports', subtitle: 'Charts + CSV export', desc: 'Work order analytics by status, person, and branch, plus a raw data grid you can export.', color: '#4f46e5', icon: 'chart' },
   { slug: 'bakenjoy-create-wo', title: 'Create Work Order', subtitle: 'New maintenance work order', desc: 'Create a maintenance work order on an equipment asset.', color: '#059669', icon: 'plus' },
   { slug: 'bakenjoy-assetbom', title: 'Asset BOM', subtitle: 'Equipment parts list', desc: 'Browse the bill of materials for an equipment asset.', color: '#d97706', icon: 'layers' },
   { slug: 'bakenjoy-parts', title: 'Part Lookup', subtitle: 'Search + availability', desc: 'Search items by description and check on-hand / available by branch.', color: '#db2777', icon: 'search' },
@@ -86,6 +87,7 @@ const Icon = ({ name, color }) => {
   if (name === 'layers') return (<svg {...common}><polygon points="12 2 2 7 12 12 22 7 12 2" /><polyline points="2 17 12 22 22 17" /><polyline points="2 12 12 17 22 12" /></svg>);
   if (name === 'search') return (<svg {...common}><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>);
   if (name === 'calendar') return (<svg {...common}><rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>);
+  if (name === 'chart') return (<svg {...common}><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /></svg>);
   return null;
 };
 
